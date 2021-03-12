@@ -10,6 +10,7 @@
             "includePath": [
                 "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/include",
                 "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/src",
+                "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/.pio/libdeps/uno/Adafruit NeoPixel",
                 "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/variants/standard",
                 "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
@@ -24,6 +25,7 @@
                 "path": [
                     "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/include",
                     "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/src",
+                    "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/.pio/libdeps/uno/Adafruit NeoPixel",
                     "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/variants/standard",
                     "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
