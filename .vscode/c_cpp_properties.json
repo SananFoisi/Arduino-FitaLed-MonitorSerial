@@ -1,23 +1,55 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "PlatformIO",
             "includePath": [
-                "C:\\Program Files (x86)\\Arduino\\tools\\**",
-                "C:\\Users\\rhyan\\Documents\\Arduino\\libraries\\**",
-                "C:\\Program Files (x86)\\Arduino\\libraries\\**",
-                "C:\\Program Files (x86)\\Arduino\\hardware\\tools\\**",
-                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\**"
+                "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/include",
+                "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/src",
+                "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/variants/standard",
+                "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                ""
             ],
-            "forcedInclude": [
-                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
-            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/include",
+                    "C:/Users/rhyan/Documents/GitHub/Arduino-FitaLed-MonitorSerial/src",
+                    "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/variants/standard",
+                    "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "C:/Users/rhyan/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    ""
+                ]
+            },
             "defines": [
-                "USBCON"
+                "PLATFORMIO=50100",
+                "ARDUINO_AVR_UNO",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
+                ""
             ],
-            "intelliSenseMode": "windows-msvc-x64",
-            "cStandard": "c17",
-            "cppStandard": "c++17"
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "C:/Users/rhyan/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerArgs": [
+                "-mmcu=atmega328p",
+                ""
+            ]
         }
     ],
     "version": 4

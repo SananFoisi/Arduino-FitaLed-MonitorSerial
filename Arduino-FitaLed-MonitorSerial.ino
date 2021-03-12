@@ -69,69 +69,69 @@ void loop()
 
     switch (dado)
     {
-    //EFEITOS
-    case '1':
-      // while (_UM < 2048)
-      // {
-      rainbowCycle(30);
-      //   _UM++;
-      // }
+      //EFEITOS
+      case '1':
+        // while (_UM < 2048)
+        // {
+        rainbowCycle(30);
+        //   _UM++;
+        // }
 
-      break;
-    case '2':
+        break;
+      case '2':
 
-      RGBLoop();
+        RGBLoop();
 
-      break;
-    case '3':
+        break;
+      case '3':
 
-      FadeInOut(0x00, 0x00, 0xff); // blue
-      FadeInOut(0x00, 0xff, 0xff); // ciano
-      FadeInOut(0x00, 0xff, 0x00); // green
-      FadeInOut(0xff, 0xff, 0x00); // yellow
-      FadeInOut(0xff, 0x00, 0x00); // red
-      FadeInOut(0xff, 0x14, 0x93); // pink
+        FadeInOut(0x00, 0x00, 0xff); // blue
+        FadeInOut(0x00, 0xff, 0xff); // ciano
+        FadeInOut(0x00, 0xff, 0x00); // green
+        FadeInOut(0xff, 0xff, 0x00); // yellow
+        FadeInOut(0xff, 0x00, 0x00); // red
+        FadeInOut(0xff, 0x14, 0x93); // pink
 
-      break;
-    case '4':
+        break;
+      case '4':
 
-      RunningLights(0xff, 0x00, 0x00, 50);
+        RunningLights(0xff, 0x00, 0x00, 50);
 
-      break;
-    case '5':
+        break;
+      case '5':
 
-      RunningLights(0x00, 0xff, 0x00, 50);
+        RunningLights(0x00, 0xff, 0x00, 50);
 
-      break;
-    case '6':
+        break;
+      case '6':
 
-      RunningLights(0x00, 0x00, 0xff, 50);
+        RunningLights(0x00, 0x00, 0xff, 50);
 
-      break;
-    case '7':
+        break;
+      case '7':
 
-      colorWipe(0xff, 0x00, 0x00, 50);
+        colorWipe(0xff, 0x00, 0x00, 50);
 
-      break;
-    case '8':
+        break;
+      case '8':
 
-      colorWipe(0x00, 0xff, 0x00, 50);
+        colorWipe(0x00, 0xff, 0x00, 50);
 
-      break;
-    case '9':
+        break;
+      case '9':
 
-      colorWipe(0x00, 0x00, 0xff, 50);
+        colorWipe(0x00, 0x00, 0xff, 50);
 
-      break;
-    case '10':
+        break;
+      case '10':
 
-      colorWipe(0xff, 0xff, 0xff, 50);
+        colorWipe(0xff, 0xff, 0xff, 50);
 
-      break;
+        break;
 
-    default:
-      Serial.println(dado);
-      break;
+      default:
+        Serial.println(dado);
+        break;
     }
   }
 }
@@ -148,15 +148,17 @@ void rainbowCycle(int SpeedDelay)
       c = Wheel(((i * 256 / NUM_LEDS) + j) & 255);
       setPixel(i, *c, *(c + 1), *(c + 2));
       if (digitalRead(botReset) == 0)
-      // {
-      //   funcReset(); //Reset
-      // }
-      void loop() {return dado};
+        // {
+        //   funcReset(); //Reset
+        // }
+        void loop() {
+        return dado
+      };
     }
-    }
-    showStrip();
-    delay(SpeedDelay);
   }
+  showStrip();
+  delay(SpeedDelay);
+}
 }
 
 byte *Wheel(byte WheelPos) /*PERTENCE A RAINBOW*/
@@ -196,15 +198,15 @@ void RGBLoop()
     {
       switch (j)
       {
-      case 0:
-        setAll(k, 0, 0);
-        break;
-      case 1:
-        setAll(0, k, 0);
-        break;
-      case 2:
-        setAll(0, 0, k);
-        break;
+        case 0:
+          setAll(k, 0, 0);
+          break;
+        case 1:
+          setAll(0, k, 0);
+          break;
+        case 2:
+          setAll(0, 0, k);
+          break;
       }
       if (digitalRead(botReset) == 0)
       {
@@ -218,15 +220,15 @@ void RGBLoop()
     {
       switch (j)
       {
-      case 0:
-        setAll(k, 0, 0);
-        break;
-      case 1:
-        setAll(0, k, 0);
-        break;
-      case 2:
-        setAll(0, 0, k);
-        break;
+        case 0:
+          setAll(k, 0, 0);
+          break;
+        case 1:
+          setAll(0, k, 0);
+          break;
+        case 2:
+          setAll(0, 0, k);
+          break;
       }
       if (digitalRead(botReset) == 0)
       {
