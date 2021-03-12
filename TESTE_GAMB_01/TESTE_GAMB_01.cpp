@@ -36,6 +36,7 @@ void colorWipe(byte red, byte green, byte blue, int SpeedDelay);
 void showStrip();
 void setPixel(int Pixel, byte red, byte green, byte blue);
 void setAll(byte red, byte green, byte blue);
+
 // FUNCTION RESET ARDUINO
 void (*funcReset)() = 0;
 
@@ -179,9 +180,23 @@ void rainbowCycle(int SpeedDelay)
       if (Serial.available() > 0)
       {
         deslig = Serial.read(); //lê os dados da porta serial
-        if (deslig == '0')
+        switch (deslig)
         {
+        case 'z':
           funcReset(); //Reset
+          break;
+
+        case 'x':
+          RGBLoop();
+          break;
+
+        case 'c':
+          RunningLights(0xff, 0x00, 0x00, 50);
+          break;
+        default:
+              Serial.println(dado);
+
+          break;
         }
       }
       /***/
@@ -296,16 +311,16 @@ void FadeInOut(byte red, byte green, byte blue)
     g = (k / 256.0) * green;
     b = (k / 256.0) * blue;
     setAll(r, g, b);
-     /***/
-      if (Serial.available() > 0)
+    /***/
+    if (Serial.available() > 0)
+    {
+      deslig = Serial.read(); //lê os dados da porta serial
+      if (deslig == '0')
       {
-        deslig = Serial.read(); //lê os dados da porta serial
-        if (deslig == '0')
-        {
-          funcReset(); //Reset
-        }
+        funcReset(); //Reset
       }
-      /***/
+    }
+    /***/
     showStrip();
   }
 
@@ -315,16 +330,16 @@ void FadeInOut(byte red, byte green, byte blue)
     g = (k / 256.0) * green;
     b = (k / 256.0) * blue;
     setAll(r, g, b);
-     /***/
-      if (Serial.available() > 0)
+    /***/
+    if (Serial.available() > 0)
+    {
+      deslig = Serial.read(); //lê os dados da porta serial
+      if (deslig == '0')
       {
-        deslig = Serial.read(); //lê os dados da porta serial
-        if (deslig == '0')
-        {
-          funcReset(); //Reset
-        }
+        funcReset(); //Reset
       }
-      /***/
+    }
+    /***/
     showStrip();
   }
 }
@@ -370,15 +385,15 @@ void colorWipe(byte red, byte green, byte blue, int SpeedDelay)
   {
     setPixel(i, red, green, blue);
     /***/
-      if (Serial.available() > 0)
+    if (Serial.available() > 0)
+    {
+      deslig = Serial.read(); //lê os dados da porta serial
+      if (deslig == '0')
       {
-        deslig = Serial.read(); //lê os dados da porta serial
-        if (deslig == '0')
-        {
-          funcReset(); //Reset
-        }
+        funcReset(); //Reset
       }
-      /***/
+    }
+    /***/
     showStrip();
     delay(SpeedDelay);
   }

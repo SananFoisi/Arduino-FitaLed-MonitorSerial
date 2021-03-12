@@ -36,6 +36,7 @@ void colorWipe(byte red, byte green, byte blue, int SpeedDelay);
 void showStrip();
 void setPixel(int Pixel, byte red, byte green, byte blue);
 void setAll(byte red, byte green, byte blue);
+
 // FUNCTION RESET ARDUINO
 void (*funcReset)() = 0;
 
