@@ -53,7 +53,7 @@ void setup()
   clock_prescale_set(clock_div_1);
 #endif
   // FIM do código específico do Trinket.
-  Serial.begin(19200);             //frequência da porta serial
+  Serial.begin(9600);              //frequência da porta serial
   strip.begin();                   // Inicialize o objeto de tira NeoPixel (NECESSÁRIO)
   strip.show();                    // DESLIGUE todos os pixels o mais rápido possível
   strip.setBrightness(200);        //Brilho da tira
@@ -71,61 +71,91 @@ void loop()
     {
     //EFEITOS
     case '1':
-      // while (_UM < 2048)
-      // {
-      rainbowCycle(30);
-      //   _UM++;
-      // }
-
+      while (_UM < 2048)
+      {
+        rainbowCycle(30);
+        _UM++;
+      }
       break;
+
     case '2':
-
-      RGBLoop();
-
+      while (_DOIS < 2048)
+      {
+        RGBLoop();
+        _DOIS++;
+      }
       break;
+
     case '3':
-
-      FadeInOut(0x00, 0x00, 0xff); // blue
-      FadeInOut(0x00, 0xff, 0xff); // ciano
-      FadeInOut(0x00, 0xff, 0x00); // green
-      FadeInOut(0xff, 0xff, 0x00); // yellow
-      FadeInOut(0xff, 0x00, 0x00); // red
-      FadeInOut(0xff, 0x14, 0x93); // pink
-
+      while (_TRES < 2048)
+      {
+        FadeInOut(0x00, 0x00, 0xff); // blue
+        FadeInOut(0x00, 0xff, 0xff); // ciano
+        FadeInOut(0x00, 0xff, 0x00); // green
+        FadeInOut(0xff, 0xff, 0x00); // yellow
+        FadeInOut(0xff, 0x00, 0x00); // red
+        FadeInOut(0xff, 0x14, 0x93); // pink
+        _TRES++;
+      }
       break;
+
     case '4':
-
-      RunningLights(0xff, 0x00, 0x00, 50);
-
+      while (_QUATRO < 2048)
+      {
+        RunningLights(0xff, 0x00, 0x00, 50);
+        _QUATRO++;
+      }
       break;
+
     case '5':
-
-      RunningLights(0x00, 0xff, 0x00, 50);
-
+      while (_CINCO < 2048)
+      {
+        RunningLights(0x00, 0xff, 0x00, 50);
+        _CINCO++;
+      }
       break;
+
     case '6':
-
-      RunningLights(0x00, 0x00, 0xff, 50);
-
+      while (_SEIS < 2048)
+      {
+        RunningLights(0x00, 0x00, 0xff, 50);
+        _SEIS++;
+      }
       break;
+
     case '7':
-
-      colorWipe(0xff, 0x00, 0x00, 50);
-
+      while (_SETE < 2048)
+      {
+        colorWipe(0xff, 0x00, 0x00, 50);
+        _SETE++;
+      }
       break;
+
     case '8':
-
-      colorWipe(0x00, 0xff, 0x00, 50);
-
+      while (_OITO < 2048)
+      {
+        colorWipe(0x00, 0xff, 0x00, 50);
+        _OITO++;
+      }
       break;
+
     case '9':
-
-      colorWipe(0x00, 0x00, 0xff, 50);
-
+      while (_NOVE < 2048)
+      {
+        colorWipe(0x00, 0x00, 0xff, 50);
+        _NOVE++;
+      }
       break;
-      
-      
-      default:
+
+    case '10':
+      while (_DEZ < 2048)
+      {
+        colorWipe(0xff, 0xff, 0xff, 50);
+        _DEZ++;
+      }
+      break;
+
+    default:
       Serial.println(dado);
       break;
     }
@@ -148,9 +178,9 @@ void rainbowCycle(int SpeedDelay)
         funcReset(); //Reset
       }
     }
+    showStrip();
+    delay(SpeedDelay);
   }
-  showStrip();
-  delay(SpeedDelay);
 }
 
 byte *Wheel(byte WheelPos) /*PERTENCE A RAINBOW*/
