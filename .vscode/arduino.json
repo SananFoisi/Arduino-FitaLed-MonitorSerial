@@ -1,0 +1,6 @@
+{
+    "programmer": "AVRISP mkII",
+    "board": "arduino:avr:uno",
+    "port": "COM3",
+    "sketch": "Arduino-FitaLed-MatrixKeyboard.ino"
+}
