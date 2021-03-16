@@ -4,7 +4,7 @@
 // Necessário para Trinket Adafruit de 16 MHz
 #ifdef __AVR__
 #include <avr/power.h>
-#endif
+#endif 
 
 #define DATA_PIN 2  // Pino de E/S digital conectado aos NeoPixels.
 #define NUM_LEDS 45 // Número de LEDs na fita
