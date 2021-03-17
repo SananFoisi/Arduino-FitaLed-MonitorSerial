@@ -1,5 +1,5 @@
 #include <Arduino.h>
-
+ 
 #include <Adafruit_NeoPixel.h> // Biblioteca para controle da fita LED
 // Necessário para Trinket Adafruit de 16 MHz
 #ifdef __AVR__
