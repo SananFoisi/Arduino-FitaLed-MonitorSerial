@@ -249,7 +249,7 @@ void RGBLoop()
           funcReset(); //Reset
         }
       }
-      /***/
+      /***/ 
 
       showStrip();
       delay(3);
